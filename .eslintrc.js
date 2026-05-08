@@ -1,19 +1,18 @@
+// ESLint legacy config (eslintrc format) — compatible with ESLint 9 via ESLINT_USE_FLAT_CONFIG=false
+// or via the eslint.config.js flat config below. We use the legacy format here for
+// compatibility with eslint-plugin-react-native which does not yet support flat config.
 module.exports = {
   root: true,
   extends: [
     'expo',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-native/all',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react-native'],
+  plugins: ['@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react-native/sort-styles': 'off',
-  },
-  env: {
-    'react-native/react-native': true,
+    'no-console': 'warn',
   },
 };

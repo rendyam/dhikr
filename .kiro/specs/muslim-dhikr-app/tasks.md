@@ -71,7 +71,7 @@ Phase 17 — E2E Tests
   - Verify `npx expo start` launches without errors
   - **Requirement**: Project scaffold (all requirements)
 
-- [ ] 2. Install and configure core dependencies
+- [x] 2. Install and configure core dependencies
   - Install Expo Router: `expo-router`, `expo-linking`, `expo-constants`, `expo-status-bar`
   - Install state management: `zustand`
   - Install database: `expo-sqlite`, `expo-file-system`, `expo-asset`
@@ -85,7 +85,7 @@ Phase 17 — E2E Tests
   - Pin all dependency versions (no open ranges)
   - **Requirement**: All requirements (dependency baseline)
 
-- [ ] 3. Configure Expo Router file-based navigation structure
+- [x] 3. Configure Expo Router file-based navigation structure
   - Create `app/_layout.tsx` — root stack layout with font loading gate
   - Create `app/(tabs)/_layout.tsx` — bottom tab navigator (Home, Favorites, Search, Todo, Profile)
   - Create stub screens: `app/(tabs)/index.tsx`, `app/(tabs)/favorites.tsx`, `app/(tabs)/search.tsx`, `app/(tabs)/todo.tsx`, `app/(tabs)/profile.tsx`
@@ -93,7 +93,7 @@ Phase 17 — E2E Tests
   - Verify navigation between all stubs works on Android, iOS, and Web
   - **Requirement**: Requirements 2.2, 4.1, 11.1, 17.1
 
-- [ ] 4. Set up design tokens and theme system
+- [x] 4. Set up design tokens and theme system
   - Create `src/theme/colors.ts` — semantic color tokens (primary, background, surface, text, border, success, warning, error)
   - Create `src/theme/typography.ts` — font families (Arabic: Amiri/Scheherazade, UI: system), size scale (small/medium/large for Arabic and UI text), line heights
   - Create `src/theme/spacing.ts` — spacing scale (4, 8, 12, 16, 24, 32, 48)
@@ -104,14 +104,14 @@ Phase 17 — E2E Tests
 
 ### Phase 2 — TypeScript Types & Database Layer
 
-- [ ] 5. Define all TypeScript types
+- [x] 5. Define all TypeScript types
   - Create `src/types/content.ts` — `AuthenticityGrade`, `SourceType`, `TextSize`, `Locale`, `Category`, `Dhikr`, `PatchManifestEntry`, `VersionManifest`, `DhikrEntry`, `DeltaPatch`
   - Create `src/types/user.ts` — `TodoItem`, `StreakData`, `Badge`, `RewardStatus`, `RewardClaim`
   - Create `src/types/index.ts` — re-export all types
   - Ensure all types match the data models in design.md exactly
   - **Requirement**: All requirements (type safety baseline)
 
-- [ ] 6. Implement SQLite database client
+- [x] 6. Implement SQLite database client
   - Create `src/db/client.ts` with `openContentDb()` and `openUserDb()` functions
   - `openContentDb()`: copy bundled `adhkar.db` from app assets to `FileSystem.documentDirectory/SQLite/adhkar.db` on first launch; open with `expo-sqlite`
   - `openUserDb()`: open `user.db` with `expo-sqlite`; run schema migrations on open
@@ -119,7 +119,7 @@ Phase 17 — E2E Tests
   - Handle content DB open failure with a full-screen error state
   - **Requirement**: Requirements 9.1, 9.2, 14.8
 
-- [ ] 7. Implement content database query functions
+- [x] 7. Implement content database query functions
   - Create `src/db/queries.ts` with all typed query functions:
     - `getCategories(db, locale): Promise<Category[]>` — join categories + category_translations
     - `getCategoryById(db, id, locale): Promise<Category | null>`
@@ -131,7 +131,7 @@ Phase 17 — E2E Tests
   - No raw SQL outside this file
   - **Requirement**: Requirements 1.2, 2.3, 2.4, 3.2, 3.3, 7.2, 7.4, 11.2
 
-- [ ] 8. Implement user database query functions
+- [x] 8. Implement user database query functions
   - Add to `src/db/queries.ts`:
     - `getFavoriteIds(db): Promise<number[]>`
     - `addFavorite(db, dhikrId): Promise<void>`
@@ -149,7 +149,7 @@ Phase 17 — E2E Tests
     - `recordCheckin(db, date, timestamp): Promise<void>`
   - **Requirement**: Requirements 10.4, 14.8, 17.6
 
-- [ ] 9. Seed the bundled adhkar.db content database
+- [x] 9. Seed the bundled adhkar.db content database
   - Create `src/db/seed/` directory
   - Write seed script `src/db/seed/seed.ts` that populates categories, category_translations, dhikr, dhikr_translations, category_dhikr, and dhikr_fts tables
   - Seed at minimum the 9 required categories (Morning, Evening, After Prayer, Before Sleep, Waking Up, Entering Home, Leaving Home, Eating, General Remembrance) with Arabic names, English translations, **and Bahasa Indonesia translations** in `category_translations`
