@@ -28,6 +28,14 @@ A running list of ideas for the Muslim Dhikr App. These are not committed to the
 
 ---
 
+## Bahasa Indonesia Translation
+
+**Idea:** Provide full Bahasa Indonesia translations for all UI strings, category names, and dhikr content so that Indonesian-speaking users can use the app entirely in their native language.
+
+**Status:** ✅ Added to requirements (Requirement 7.2) — Bahasa Indonesia is a built-in display language at launch. UI strings are in `src/i18n/locales/id.json`; dhikr translations in Indonesian are seeded in the `dhikr_translations` table with `locale = 'id'`.
+
+---
+
 ## Audio Recitation
 
 **Idea:** Play an audio recitation of each dhikr so users can learn the correct pronunciation.

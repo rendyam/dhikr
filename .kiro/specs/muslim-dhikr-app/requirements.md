@@ -24,7 +24,7 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 - **User**: A Muslim individual using the App on an Android or iOS device, or via a web browser on any platform.
 - **Authenticated User**: A User who has signed in to the App using their Google account via Firebase Authentication.
 - **Guest User**: A User who uses the App without signing in.
-- **Check-in**: A daily action the User performs by opening the App and tapping a dedicated check-in button, recorded once per calendar day.
+- **Check-in**: An automatic daily record created the first time the User views a dhikr entry on a given calendar day, requiring no manual button tap.
 - **Streak**: A consecutive-day count of daily check-ins without a missed day.
 - **Streak Milestone**: A predefined streak length (e.g., 7, 30, 100 days) at which the App awards the User a badge.
 - **Badge**: A visual achievement awarded to the User upon reaching a Streak Milestone.
@@ -34,6 +34,10 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 - **To-Do List**: The collection of all To-Do Items belonging to a User.
 - **Reward Claim**: A voluntary submission by an Authenticated User of their GoPay phone number to receive a streak milestone reward.
 - **Reward Status**: The state of a Reward Claim — one of: Pending (submitted, not yet processed), Sent (reward disbursed by the admin), or Claimed (acknowledged by the User).
+- **Content_Update_Service**: The in-app service responsible for checking for, downloading, and applying remote content delta patches on app launch.
+- **Content_Generation_Function**: A Firebase Cloud Function that generates versioned delta patch files and uploads them to Firebase Storage whenever adhkar content changes in Firestore.
+- **Delta Patch**: A lightweight JSON file describing only the additions, updates, and deletions between two content versions, used to update the local SQLite database without a full app release.
+- **Version Manifest**: A small file hosted on Firebase Storage that records the current latest content version number, checked by the App on each launch to determine whether a delta patch is available.
 
 ---
 
@@ -46,7 +50,7 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 #### Acceptance Criteria
 
 1. THE Content_Database SHALL contain adhkar sourced exclusively from the Qur'an or Hadiths graded Sahih or Hasan by recognized Hadith scholars.
-2. THE Content_Database SHALL store, for each dhikr entry: the Arabic Text, Transliteration, Translation (in at least English), Source Reference, and Authenticity Grade.
+2. THE Content_Database SHALL store, for each dhikr entry: the Arabic Text, Transliteration, Translation (in at least English and Bahasa Indonesia), Source Reference, and Authenticity Grade.
 3. WHEN a dhikr is derived from a Qur'anic verse, THE Content_Database SHALL record the Source Reference as the Surah name and Ayah number.
 4. WHEN a dhikr is derived from a Hadith, THE Content_Database SHALL record the Source Reference as the Hadith collection name, book number, and Hadith number.
 5. THE Content_Database SHALL assign each dhikr to one or more Categories.
@@ -130,9 +134,10 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 #### Acceptance Criteria
 
 1. THE App SHALL support English as the default display language at launch.
-2. WHEN the User selects a display language in settings, THE App SHALL render all UI labels, Category names, and dhikr Translations in the selected language.
-3. THE App SHALL always display Arabic Text in Arabic script regardless of the selected display language.
-4. WHERE a Translation for a dhikr is not available in the selected display language, THE App SHALL fall back to the English Translation and display a notice to the User.
+2. THE App SHALL support Bahasa Indonesia as a built-in display language available at launch, with full UI string translations and dhikr translations in Indonesian.
+3. WHEN the User selects a display language in settings, THE App SHALL render all UI labels, Category names, and dhikr Translations in the selected language.
+4. THE App SHALL always display Arabic Text in Arabic script regardless of the selected display language.
+5. WHERE a Translation for a dhikr is not available in the selected display language, THE App SHALL fall back to the English Translation and display a notice to the User.
 
 ---
 
@@ -222,8 +227,8 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 
 #### Acceptance Criteria
 
-1. THE App SHALL record a Check-in for the User the first time the User opens the App on a given calendar day.
-2. THE App SHALL display a visible Check-in indicator on the home screen showing whether the User has checked in today.
+1. THE App SHALL record a Check-in for the User the first time the User views a dhikr entry on a given calendar day.
+2. THE App SHALL display a visible Check-in indicator on the home screen showing whether the User has read at least one dhikr today.
 3. THE App SHALL maintain a Streak counter that increments by one for each consecutive day the User checks in.
 4. WHEN the User misses a calendar day without a Check-in, THE App SHALL reset the Streak counter to zero.
 5. THE App SHALL display the User's current Streak count prominently on the home screen.
@@ -248,7 +253,7 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 5. WHEN the User taps the Daily Notification, THE App SHALL open and navigate directly to the Dhikr Detail View for the featured Dhikr of the Day.
 6. THE App SHALL allow the User to enable or disable Daily Notifications in settings.
 7. THE App SHALL allow the User to configure the Daily Notification delivery time in settings.
-8. WHEN the User has already opened the App on a given calendar day, THE App SHALL NOT send the Daily Notification for that day.
+8. WHEN the User has already read at least one dhikr on a given calendar day, THE App SHALL NOT send the Daily Notification for that day.
 9. THE App SHALL deliver Daily Notifications on Android and iOS using the platform's native notification system.
 10. THE Web App SHALL deliver Daily Notifications via the Web Push API on supported browsers, subject to the User granting browser notification permission.
 
@@ -306,3 +311,74 @@ A cross-platform application (Android, iOS, and Web) that enables Muslims to acc
 8. THE App SHALL NOT require the User to submit a GoPay number to receive or keep their badge — the badge is awarded regardless.
 9. THE App SHALL link to the privacy policy from the reward claim prompt, explaining how the GoPay number is stored and used.
 10. THE App SHALL provide an admin-readable Firestore collection (`reward_claims`) containing all Pending Reward Claims, so that the app administrator can review and process disbursements manually.
+
+---
+
+### Requirement 19: Remote Content Updates via Delta Patch
+
+**User Story:** As a Muslim user, I want the app's dhikr content to stay up to date without requiring a full app update, so that new or corrected adhkar are available to me automatically.
+
+#### Acceptance Criteria
+
+1. WHEN the App launches and the device has a network connection, THE Content_Update_Service SHALL check a version manifest hosted on Firebase Storage to determine whether a newer content version is available.
+2. WHEN the version manifest indicates a newer content version than the locally applied version, THE Content_Update_Service SHALL download the corresponding delta patch file from Firebase Storage.
+3. THE delta patch file SHALL be a JSON document containing the following fields: `version` (the new content version number), `baseVersion` (the version the patch applies on top of), `additions` (an array of new dhikr entries to insert), `updates` (an array of modified dhikr entries to apply), and `deletions` (an array of dhikr IDs to remove).
+4. WHEN a delta patch file is successfully downloaded, THE Content_Update_Service SHALL apply the patch to the local SQLite database by inserting all additions, updating all modified entries, and deleting all entries whose IDs appear in the deletions array.
+5. WHEN a delta patch is successfully applied, THE App SHALL store the new content version number locally so that subsequent launch checks compare against the updated version.
+6. THE Content_Update_Service SHALL perform the version check, download, and patch application entirely in the background and SHALL NOT block app startup or access to dhikr content.
+7. IF the version manifest download fails, THEN THE App SHALL continue using the existing local content without displaying an error to the User.
+8. IF the delta patch download fails, THEN THE App SHALL continue using the existing local content without displaying an error to the User.
+9. IF applying the delta patch to the local SQLite database fails, THEN THE App SHALL roll back any partial changes and continue using the existing local content without displaying an error to the User.
+10. THE App SHALL ship with a baseline `adhkar.db` bundled in the application package, ensuring all content is available on first launch without any network request (as established in Requirement 9).
+11. THE Content_Database content source of truth SHALL be Firebase Firestore, managed by the app administrator via the Firebase Console or admin scripts.
+12. WHEN content in Firestore changes, THE Content_Generation_Function (a Firebase Cloud Function) SHALL generate a versioned delta patch file and upload it to Firebase Storage, along with an updated version manifest.
+
+---
+
+### Requirement 20: Server-Side Streak Verification
+
+**User Story:** As the app administrator, I want streak counts to be verified server-side, so that only legitimate streaks qualify for GoPay reward claims.
+
+#### Acceptance Criteria
+
+1. THE App SHALL store a check-in history log in Firestore for each Authenticated User, recording one entry per calendar day the user views a dhikr entry (date string 'YYYY-MM-DD' and server timestamp).
+2. WHEN an Authenticated User views a dhikr entry for the first time on a given calendar day, THE App SHALL write the check-in record to Firestore using a server-side timestamp (not the client clock).
+3. A Firebase Cloud Function SHALL recompute the user's currentStreak from the check-in history log whenever a new check-in is written, counting consecutive calendar days ending on the most recent check-in date.
+4. THE Cloud Function SHALL write the recomputed currentStreak and longestStreak back to the user's Firestore streak document.
+5. WHEN the App reads the streak for an Authenticated User, THE App SHALL use the Firestore-computed streak value, not the locally computed value.
+6. WHEN an Authenticated User submits a reward claim (Requirement 18), THE App SHALL verify the user's currentStreak in Firestore meets the milestone threshold before storing the Reward Claim; IF the Firestore streak does not meet the threshold, THE App SHALL reject the claim and display an error message.
+7. THE check-in history log SHALL be write-once per calendar day per user — duplicate check-ins on the same day SHALL be ignored by the Cloud Function.
+
+---
+
+### Requirement 21: Sign-In Nudge for Guest Users with Streaks
+
+**User Story:** As a Guest user who has built up a streak, I want to be reminded to sign in so that I don't lose my progress if I uninstall or switch devices.
+
+#### Acceptance Criteria
+
+1. WHEN a Guest User's streak reaches 3 or more consecutive days, THE App SHALL display a non-blocking popup encouraging the user to sign in to protect their streak.
+2. THE popup SHALL clearly explain that streak data is stored only on the device for Guest Users and will be lost if the app is uninstalled or the device is changed.
+3. THE popup SHALL provide a "Sign In" button that navigates to the sign-in screen, and a "Maybe Later" button that dismisses the popup.
+4. WHEN the User taps "Maybe Later", THE App SHALL not show the same nudge popup again for at least 3 days.
+5. THE App SHALL show the nudge popup again if the user's streak increases by 7 or more days since the last dismissal.
+6. THE App SHALL NOT show the nudge popup to Authenticated Users.
+7. THE App SHALL NOT show the nudge popup if the user has previously dismissed it permanently (via a "Don't show again" option).
+8. THE popup SHALL include a "Don't show again" option that permanently suppresses the nudge for that device.
+
+---
+
+### Requirement 22: Local Streak Migration on Sign-In
+
+**User Story:** As a Guest user who signs in for the first time, I want my existing local streak to be carried over to my account, so that I don't lose the progress I built before signing in.
+
+#### Acceptance Criteria
+
+1. WHEN a Guest User completes Google Sign-In for the first time on a device, THE App SHALL read the local streak data (currentStreak, lastCheckin, longestStreak) and check-in history from the local SQLite database.
+2. IF the local streak is greater than zero, THE App SHALL offer the user a choice to migrate their local streak to their account before discarding it.
+3. WHEN the User confirms migration, THE App SHALL write the local check-in history entries to the Firestore check-in history log for that user, using the stored local dates.
+4. AFTER writing the local check-in history to Firestore, THE Cloud Function (Requirement 20) SHALL recompute the streak from the merged history, producing the authoritative server-side streak.
+5. IF the Firestore account already has an existing streak (user previously signed in on another device), THE App SHALL merge the local and remote check-in histories by union — keeping all unique dates from both — before triggering the recomputation.
+6. WHEN the User declines migration, THE App SHALL discard the local streak and use the Firestore streak (which may be zero for a new account).
+7. AFTER migration is complete, THE App SHALL use the Firestore-computed streak as the authoritative value and no longer maintain a separate local streak for that user.
+8. THE migration offer SHALL only be shown once per sign-in event — if the user dismisses it, it SHALL NOT reappear on subsequent app launches.
