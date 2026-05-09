@@ -175,7 +175,7 @@ Phase 17 — E2E Tests
 ### Phase 4 — Shared UI Components
 An unexpected error occurred, please retry.
 
-- [ ] 11. Implement ArabicText component
+- [x] 11. Implement ArabicText component
   - Create `src/components/ArabicText.tsx`
   - Props: `text: string`, `size: TextSize`, `style?: StyleProp<TextStyle>`
   - Renders text in Amiri/Scheherazade font with `writingDirection: 'rtl'` and `textAlign: 'right'`
