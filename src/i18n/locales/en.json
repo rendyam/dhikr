@@ -1,0 +1,207 @@
+{
+  "tabs": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "search": "Search",
+    "todo": "To-Do",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Adhkar",
+    "streakLabel": "Day Streak",
+    "checkedInToday": "Checked in today",
+    "notCheckedIn": "Not checked in yet",
+    "categoriesHeading": "Categories",
+    "favoritesHeading": "Favorites",
+    "favoritesEmpty": "No favorites yet. Tap the heart on any dhikr to save it here.",
+    "viewAllFavorites": "View all favorites"
+  },
+  "category": {
+    "startSession": "Start Session",
+    "dhikrCount_one": "{{count}} dhikr",
+    "dhikrCount_other": "{{count}} adhkar",
+    "emptyState": "No adhkar found in this category."
+  },
+  "dhikr": {
+    "translationFallbackNotice": "(English translation — no translation available in your selected language)",
+    "repetitionCount_one": "Recite {{count}} time",
+    "repetitionCount_other": "Recite {{count}} times",
+    "noRepetitionCount": "Recite as desired",
+    "viewSource": "View Source",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites"
+  },
+  "source": {
+    "title": "Source",
+    "hadithReference": "{{collection}}, Book {{book}}, Hadith {{number}}",
+    "quranReference": "{{surah}}, Ayah {{ayah}}",
+    "authenticityGrade": "Authenticity Grade",
+    "scholars": "Graded by",
+    "gradingRationale": "Grading Rationale",
+    "fullText": "Full Text",
+    "noRationale": "No grading rationale available."
+  },
+  "session": {
+    "progress": "{{current}} of {{total}}",
+    "next": "Next",
+    "finish": "Finish",
+    "exitTitle": "Exit Session?",
+    "exitMessage": "Your progress will be lost. Are you sure you want to exit?",
+    "exitConfirm": "Exit",
+    "exitCancel": "Continue",
+    "completionTitle": "Session Complete",
+    "completionMessage": "You have completed all adhkar in this session. May Allah accept it from you.",
+    "completionButton": "Done",
+    "counterReset": "Reset Counter",
+    "counterResetMessage": "Are you sure you want to reset the count to zero?",
+    "counterResetConfirm": "Reset",
+    "counterResetCancel": "Cancel"
+  },
+  "counter": {
+    "accessibilityLabel": "Counter: {{count}} of {{target}}",
+    "accessibilityLabelNoTarget": "Counter: {{count}}"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "emptyTitle": "No Favorites Yet",
+    "emptyMessage": "Tap the heart icon on any dhikr to save it here for quick access.",
+    "removeConfirmTitle": "Remove Favorite?",
+    "removeConfirmMessage": "Remove this dhikr from your favorites?",
+    "removeConfirm": "Remove",
+    "removeCancel": "Cancel"
+  },
+  "search": {
+    "placeholder": "Search adhkar…",
+    "noResultsTitle": "No Results Found",
+    "noResultsMessage": "No adhkar matched \"{{query}}\". Try a different keyword.",
+    "emptyQueryHint": "Type to search Arabic text, transliteration, or translation."
+  },
+  "todo": {
+    "title": "To-Do",
+    "emptyTitle": "No Goals Yet",
+    "emptyMessage": "Add your first personal dhikr goal to get started.",
+    "addButton": "Add Goal",
+    "addTitle": "New Goal",
+    "editTitle": "Edit Goal",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Enter a title…",
+    "notesLabel": "Notes (optional)",
+    "notesPlaceholder": "Add notes…",
+    "saveButton": "Save",
+    "cancelButton": "Cancel",
+    "deleteConfirmTitle": "Delete Goal?",
+    "deleteConfirmMessage": "This goal will be permanently deleted.",
+    "deleteConfirm": "Delete",
+    "deleteCancel": "Cancel",
+    "titleRequired": "Title is required.",
+    "completedLabel": "Completed",
+    "incompleteLabel": "Incomplete"
+  },
+  "profile": {
+    "title": "Profile",
+    "guestTitle": "Guest User",
+    "guestSubtitle": "Sign in to sync your streak and favorites across devices.",
+    "signInButton": "Sign in with Google",
+    "signOutButton": "Sign Out",
+    "signOutConfirmTitle": "Sign Out?",
+    "signOutConfirmMessage": "You will be signed out and your data will no longer sync.",
+    "signOutConfirm": "Sign Out",
+    "signOutCancel": "Cancel",
+    "settingsButton": "Settings",
+    "badgesHeading": "Badges",
+    "noBadges": "Complete a streak to earn badges."
+  },
+  "signIn": {
+    "title": "Sign In",
+    "subtitle": "Sign in to protect your streak and sync your data across devices.",
+    "googleButton": "Sign in with Google",
+    "loading": "Signing in…",
+    "errorTitle": "Sign-In Failed",
+    "errorNetwork": "A network error occurred. Please check your connection and try again.",
+    "errorCancelled": "Sign-in was cancelled.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "dismissError": "Dismiss"
+  },
+  "settings": {
+    "title": "Settings",
+    "languageSection": "Language",
+    "languageLabel": "Display Language",
+    "languageEnglish": "English",
+    "languageIndonesian": "Bahasa Indonesia",
+    "textSizeSection": "Text Size",
+    "textSizeLabel": "Arabic Text Size",
+    "textSizeSmall": "Small",
+    "textSizeMedium": "Medium",
+    "textSizeLarge": "Large",
+    "transliterationSection": "Transliteration",
+    "transliterationLabel": "Show Transliteration",
+    "notificationsSection": "Notifications",
+    "notificationsLabel": "Daily Reminder",
+    "notificationsTimeLabel": "Reminder Time",
+    "notificationsDisabledHint": "Enable notifications in your device settings to use this feature.",
+    "openSystemSettings": "Open Settings"
+  },
+  "badges": {
+    "day7": "7-Day Streak",
+    "day30": "30-Day Streak",
+    "day100": "100-Day Streak",
+    "earnedOn": "Earned on {{date}}",
+    "locked": "Locked"
+  },
+  "streakNudge": {
+    "title": "Protect Your Streak",
+    "message": "You have a {{streak}}-day streak! Sign in to keep it safe — streaks for guest users are stored only on this device and will be lost if you uninstall the app or switch devices.",
+    "signInButton": "Sign In",
+    "laterButton": "Maybe Later",
+    "dismissButton": "Don't show again"
+  },
+  "streakMigration": {
+    "title": "Migrate Your Streak",
+    "message": "You have a {{streak}}-day local streak. Would you like to migrate it to your account so it's preserved across devices?",
+    "migrateButton": "Migrate Streak",
+    "skipButton": "Skip",
+    "loading": "Migrating…",
+    "errorMessage": "Migration failed. Please try again.",
+    "retryButton": "Retry"
+  },
+  "rewardClaim": {
+    "title": "Claim Your Reward",
+    "message": "Congratulations on your {{milestone}}-day streak! You can optionally submit your GoPay number to receive a reward from the app team.",
+    "gopayLabel": "GoPay Number",
+    "gopayPlaceholder": "e.g. 08123456789",
+    "submitButton": "Submit",
+    "cancelButton": "Cancel",
+    "successTitle": "Claim Submitted",
+    "successMessage": "Your reward claim has been received. The team will process it and contact you.",
+    "privacyNote": "Your GoPay number will only be used to disburse this reward.",
+    "privacyLink": "Privacy Policy",
+    "invalidNumber": "Please enter a valid Indonesian mobile number.",
+    "alreadyClaimed": "You have already submitted a claim for this milestone.",
+    "streakTooLow": "Your current streak does not meet the milestone requirement.",
+    "networkError": "A network error occurred. Please try again."
+  },
+  "authenticityGrade": {
+    "sahih": "Sahih",
+    "hasan": "Hasan"
+  },
+  "errors": {
+    "dbLoadFailed": "Failed to load content database. Please restart the app.",
+    "contentLoadFailed": "Failed to load content. Please try again.",
+    "retry": "Retry",
+    "unknownError": "An unexpected error occurred."
+  },
+  "common": {
+    "loading": "Loading…",
+    "close": "Close",
+    "back": "Back",
+    "done": "Done",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

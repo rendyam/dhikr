@@ -163,7 +163,7 @@ Phase 17 — E2E Tests
 
 ### Phase 3 — i18n and Localization
 
-- [ ] 10. Set up i18next localization
+- [x] 10. Set up i18next localization
   - Create `src/i18n/index.ts` — initialize i18next with `react-i18next`, language detection, and fallback to 'en'
   - Create `src/i18n/locales/en.json` — all English UI strings (tab labels, button labels, empty states, error messages, settings labels, modal text)
   - Create `src/i18n/locales/id.json` — **complete Bahasa Indonesia translations** for all UI strings (tab labels, button labels, empty states, error messages, settings labels, modal text)
@@ -173,6 +173,7 @@ Phase 17 — E2E Tests
   - **Requirement**: Requirements 7.1, 7.2, 7.3, 7.5, 12.3
 
 ### Phase 4 — Shared UI Components
+An unexpected error occurred, please retry.
 
 - [ ] 11. Implement ArabicText component
   - Create `src/components/ArabicText.tsx`

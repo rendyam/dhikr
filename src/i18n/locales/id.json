@@ -1,0 +1,207 @@
+{
+  "tabs": {
+    "home": "Beranda",
+    "favorites": "Favorit",
+    "search": "Cari",
+    "todo": "Tugas",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "Dzikir",
+    "streakLabel": "Hari Berturut-turut",
+    "checkedInToday": "Sudah check-in hari ini",
+    "notCheckedIn": "Belum check-in hari ini",
+    "categoriesHeading": "Kategori",
+    "favoritesHeading": "Favorit",
+    "favoritesEmpty": "Belum ada favorit. Ketuk ikon hati pada dzikir mana pun untuk menyimpannya di sini.",
+    "viewAllFavorites": "Lihat semua favorit"
+  },
+  "category": {
+    "startSession": "Mulai Sesi",
+    "dhikrCount_one": "{{count}} dzikir",
+    "dhikrCount_other": "{{count}} dzikir",
+    "emptyState": "Tidak ada dzikir dalam kategori ini."
+  },
+  "dhikr": {
+    "translationFallbackNotice": "(Terjemahan bahasa Inggris — terjemahan tidak tersedia dalam bahasa yang dipilih)",
+    "repetitionCount_one": "Baca {{count}} kali",
+    "repetitionCount_other": "Baca {{count}} kali",
+    "noRepetitionCount": "Baca sesuai keinginan",
+    "viewSource": "Lihat Sumber",
+    "addToFavorites": "Tambah ke favorit",
+    "removeFromFavorites": "Hapus dari favorit"
+  },
+  "source": {
+    "title": "Sumber",
+    "hadithReference": "{{collection}}, Kitab {{book}}, Hadits {{number}}",
+    "quranReference": "{{surah}}, Ayat {{ayah}}",
+    "authenticityGrade": "Tingkat Keaslian",
+    "scholars": "Dinilai oleh",
+    "gradingRationale": "Alasan Penilaian",
+    "fullText": "Teks Lengkap",
+    "noRationale": "Tidak ada alasan penilaian yang tersedia."
+  },
+  "session": {
+    "progress": "{{current}} dari {{total}}",
+    "next": "Berikutnya",
+    "finish": "Selesai",
+    "exitTitle": "Keluar dari Sesi?",
+    "exitMessage": "Progres Anda akan hilang. Apakah Anda yakin ingin keluar?",
+    "exitConfirm": "Keluar",
+    "exitCancel": "Lanjutkan",
+    "completionTitle": "Sesi Selesai",
+    "completionMessage": "Anda telah menyelesaikan semua dzikir dalam sesi ini. Semoga Allah menerimanya dari Anda.",
+    "completionButton": "Selesai",
+    "counterReset": "Reset Penghitung",
+    "counterResetMessage": "Apakah Anda yakin ingin mereset hitungan ke nol?",
+    "counterResetConfirm": "Reset",
+    "counterResetCancel": "Batal"
+  },
+  "counter": {
+    "accessibilityLabel": "Penghitung: {{count}} dari {{target}}",
+    "accessibilityLabelNoTarget": "Penghitung: {{count}}"
+  },
+  "favorites": {
+    "title": "Favorit",
+    "emptyTitle": "Belum Ada Favorit",
+    "emptyMessage": "Ketuk ikon hati pada dzikir mana pun untuk menyimpannya di sini agar mudah diakses.",
+    "removeConfirmTitle": "Hapus Favorit?",
+    "removeConfirmMessage": "Hapus dzikir ini dari favorit Anda?",
+    "removeConfirm": "Hapus",
+    "removeCancel": "Batal"
+  },
+  "search": {
+    "placeholder": "Cari dzikir…",
+    "noResultsTitle": "Tidak Ada Hasil",
+    "noResultsMessage": "Tidak ada dzikir yang cocok dengan \"{{query}}\". Coba kata kunci lain.",
+    "emptyQueryHint": "Ketik untuk mencari teks Arab, transliterasi, atau terjemahan."
+  },
+  "todo": {
+    "title": "Tugas",
+    "emptyTitle": "Belum Ada Tujuan",
+    "emptyMessage": "Tambahkan tujuan dzikir pribadi pertama Anda untuk memulai.",
+    "addButton": "Tambah Tujuan",
+    "addTitle": "Tujuan Baru",
+    "editTitle": "Edit Tujuan",
+    "titleLabel": "Judul",
+    "titlePlaceholder": "Masukkan judul…",
+    "notesLabel": "Catatan (opsional)",
+    "notesPlaceholder": "Tambahkan catatan…",
+    "saveButton": "Simpan",
+    "cancelButton": "Batal",
+    "deleteConfirmTitle": "Hapus Tujuan?",
+    "deleteConfirmMessage": "Tujuan ini akan dihapus secara permanen.",
+    "deleteConfirm": "Hapus",
+    "deleteCancel": "Batal",
+    "titleRequired": "Judul wajib diisi.",
+    "completedLabel": "Selesai",
+    "incompleteLabel": "Belum Selesai"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestTitle": "Pengguna Tamu",
+    "guestSubtitle": "Masuk untuk menyinkronkan streak dan favorit Anda di semua perangkat.",
+    "signInButton": "Masuk dengan Google",
+    "signOutButton": "Keluar",
+    "signOutConfirmTitle": "Keluar?",
+    "signOutConfirmMessage": "Anda akan keluar dan data Anda tidak akan lagi disinkronkan.",
+    "signOutConfirm": "Keluar",
+    "signOutCancel": "Batal",
+    "settingsButton": "Pengaturan",
+    "badgesHeading": "Lencana",
+    "noBadges": "Selesaikan streak untuk mendapatkan lencana."
+  },
+  "signIn": {
+    "title": "Masuk",
+    "subtitle": "Masuk untuk melindungi streak Anda dan menyinkronkan data di semua perangkat.",
+    "googleButton": "Masuk dengan Google",
+    "loading": "Sedang masuk…",
+    "errorTitle": "Gagal Masuk",
+    "errorNetwork": "Terjadi kesalahan jaringan. Periksa koneksi Anda dan coba lagi.",
+    "errorCancelled": "Proses masuk dibatalkan.",
+    "errorGeneric": "Terjadi kesalahan. Silakan coba lagi.",
+    "dismissError": "Tutup"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "languageSection": "Bahasa",
+    "languageLabel": "Bahasa Tampilan",
+    "languageEnglish": "English",
+    "languageIndonesian": "Bahasa Indonesia",
+    "textSizeSection": "Ukuran Teks",
+    "textSizeLabel": "Ukuran Teks Arab",
+    "textSizeSmall": "Kecil",
+    "textSizeMedium": "Sedang",
+    "textSizeLarge": "Besar",
+    "transliterationSection": "Transliterasi",
+    "transliterationLabel": "Tampilkan Transliterasi",
+    "notificationsSection": "Notifikasi",
+    "notificationsLabel": "Pengingat Harian",
+    "notificationsTimeLabel": "Waktu Pengingat",
+    "notificationsDisabledHint": "Aktifkan notifikasi di pengaturan perangkat Anda untuk menggunakan fitur ini.",
+    "openSystemSettings": "Buka Pengaturan"
+  },
+  "badges": {
+    "day7": "Streak 7 Hari",
+    "day30": "Streak 30 Hari",
+    "day100": "Streak 100 Hari",
+    "earnedOn": "Diperoleh pada {{date}}",
+    "locked": "Terkunci"
+  },
+  "streakNudge": {
+    "title": "Lindungi Streak Anda",
+    "message": "Anda memiliki streak {{streak}} hari! Masuk untuk menjaganya — streak pengguna tamu hanya tersimpan di perangkat ini dan akan hilang jika Anda menghapus aplikasi atau berganti perangkat.",
+    "signInButton": "Masuk",
+    "laterButton": "Nanti Saja",
+    "dismissButton": "Jangan tampilkan lagi"
+  },
+  "streakMigration": {
+    "title": "Migrasi Streak Anda",
+    "message": "Anda memiliki streak lokal {{streak}} hari. Apakah Anda ingin memindahkannya ke akun Anda agar tersimpan di semua perangkat?",
+    "migrateButton": "Migrasi Streak",
+    "skipButton": "Lewati",
+    "loading": "Sedang migrasi…",
+    "errorMessage": "Migrasi gagal. Silakan coba lagi.",
+    "retryButton": "Coba Lagi"
+  },
+  "rewardClaim": {
+    "title": "Klaim Hadiah Anda",
+    "message": "Selamat atas streak {{milestone}} hari Anda! Anda dapat secara opsional mengirimkan nomor GoPay Anda untuk menerima hadiah dari tim aplikasi.",
+    "gopayLabel": "Nomor GoPay",
+    "gopayPlaceholder": "mis. 08123456789",
+    "submitButton": "Kirim",
+    "cancelButton": "Batal",
+    "successTitle": "Klaim Terkirim",
+    "successMessage": "Klaim hadiah Anda telah diterima. Tim akan memprosesnya dan menghubungi Anda.",
+    "privacyNote": "Nomor GoPay Anda hanya akan digunakan untuk mencairkan hadiah ini.",
+    "privacyLink": "Kebijakan Privasi",
+    "invalidNumber": "Masukkan nomor ponsel Indonesia yang valid.",
+    "alreadyClaimed": "Anda sudah mengajukan klaim untuk pencapaian ini.",
+    "streakTooLow": "Streak Anda saat ini tidak memenuhi persyaratan pencapaian.",
+    "networkError": "Terjadi kesalahan jaringan. Silakan coba lagi."
+  },
+  "authenticityGrade": {
+    "sahih": "Sahih",
+    "hasan": "Hasan"
+  },
+  "errors": {
+    "dbLoadFailed": "Gagal memuat basis data konten. Silakan mulai ulang aplikasi.",
+    "contentLoadFailed": "Gagal memuat konten. Silakan coba lagi.",
+    "retry": "Coba Lagi",
+    "unknownError": "Terjadi kesalahan yang tidak terduga."
+  },
+  "common": {
+    "loading": "Memuat…",
+    "close": "Tutup",
+    "back": "Kembali",
+    "done": "Selesai",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "add": "Tambah",
+    "confirm": "Konfirmasi",
+    "yes": "Ya",
+    "no": "Tidak"
+  }
+}
