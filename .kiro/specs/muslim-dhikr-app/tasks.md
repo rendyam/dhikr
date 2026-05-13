@@ -496,7 +496,7 @@ An unexpected error occurred, please retry.
 
 ### Phase 8 — Streak Nudge & Migration Modals
 
-- [ ] 43. Implement StreakNudgeModal component
+- [x] 43. Implement StreakNudgeModal component
   - Create `src/components/StreakNudgeModal.tsx`
   - Props: `visible: boolean`, `streak: number`, `onSignIn: () => void`, `onLater: () => void`, `onDismissPermanently: () => void`
   - Bottom sheet modal (non-blocking)
@@ -507,7 +507,7 @@ An unexpected error occurred, please retry.
   - Write component test: all three buttons call correct callbacks, streak count displayed
   - **Requirement**: Requirements 21.1–21.8
 
-- [ ] 44. Implement StreakMigrationModal component
+- [x] 44. Implement StreakMigrationModal component
   - Create `src/components/StreakMigrationModal.tsx`
   - Props: `visible: boolean`, `localStreak: number`, `onMigrate: () => void`, `onSkip: () => void`, `isLoading: boolean`, `error: string | null`
   - Displays local streak count; explains migration offer
