@@ -1,4 +1,4 @@
-# Tasks: Muslim Dhikr App
+# Implementation Plan: Muslim Dhikr App
 
 ## Task Dependency Graph
 
@@ -184,7 +184,7 @@ An unexpected error occurred, please retry.
   - Write unit test: renders Arabic text, applies correct font size for each TextSize value
   - **Requirement**: Requirements 3.1, 8.2, 12.3
 
-- [ ] 12. Implement SourceBadge component
+- [x] 12. Implement SourceBadge component
   - Create `src/components/SourceBadge.tsx`
   - Props: `grade: AuthenticityGrade`
   - Renders a colored pill: green for 'sahih', amber for 'hasan'
@@ -192,7 +192,7 @@ An unexpected error occurred, please retry.
   - Write unit test: renders correct color and label for each grade
   - **Requirement**: Requirements 3.3, 6.1, 6.2
 
-- [ ] 13. Implement Counter component
+- [x] 13. Implement Counter component
   - Create `src/components/Counter.tsx`
   - Props: `count: number`, `target?: number`, `onTap: () => void`, `onLongPress: () => void`
   - Displays `count` when no target; displays `count / target` when target defined
@@ -204,7 +204,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: tap increments display, target display format, completion state, long-press callback
   - **Requirement**: Requirements 4.2, 4.3, 5.1, 5.2, 5.3, 5.4
 
-- [ ] 14. Implement DhikrCard component
+- [x] 14. Implement DhikrCard component
   - Create `src/components/DhikrCard.tsx`
   - Props: `dhikr: Dhikr`, `onPress: () => void`, `onFavorite: () => void`, `isFavorite: boolean`
   - Displays Arabic text snippet (first line), source badge, favorite toggle icon
@@ -212,7 +212,7 @@ An unexpected error occurred, please retry.
   - Write unit test: renders Arabic text, source badge, favorite toggle; calls callbacks on press
   - **Requirement**: Requirements 2.3, 3.1, 10.1
 
-- [ ] 15. Implement CategoryCard component
+- [x] 15. Implement CategoryCard component
   - Create `src/components/CategoryCard.tsx`
   - Props: `category: Category`, `onPress: () => void`
   - Displays Arabic category name (`nameAr`) and translated name (`name`)
@@ -221,7 +221,7 @@ An unexpected error occurred, please retry.
   - Write unit test: renders both Arabic and translated names, calls onPress
   - **Requirement**: Requirements 2.2, 2.4
 
-- [ ] 16. Implement StreakWidget component
+- [x] 16. Implement StreakWidget component
   - Create `src/components/StreakWidget.tsx`
   - Props: `streak: number`, `checkedInToday: boolean`
   - Displays flame icon + streak count; distinct visual state for checked-in vs not checked-in today
@@ -229,7 +229,7 @@ An unexpected error occurred, please retry.
   - Write unit test: renders streak count, correct checked-in state styling
   - **Requirement**: Requirements 14.2, 14.5
 
-- [ ] 17. Implement SessionProgress component
+- [x] 17. Implement SessionProgress component
   - Create `src/components/SessionProgress.tsx`
   - Props: `current: number`, `total: number`
   - Renders a horizontal progress bar; `current / total` fill ratio
@@ -237,7 +237,7 @@ An unexpected error occurred, please retry.
   - Write unit test: progress bar width reflects current/total ratio
   - **Requirement**: Requirement 4.1
 
-- [ ] 18. Implement TodoItem component
+- [x] 18. Implement TodoItem component
   - Create `src/components/TodoItem.tsx`
   - Props: `item: TodoItem`, `onToggle: () => void`, `onDelete: () => void`, `onEdit: () => void`
   - Checkbox + title; completed items show strikethrough
@@ -246,7 +246,7 @@ An unexpected error occurred, please retry.
   - Write unit test: toggle changes visual state, delete calls onDelete, edit calls onEdit
   - **Requirement**: Requirements 17.3, 17.4, 17.5
 
-- [ ] 19. Implement BadgeDisplay component
+- [x] 19. Implement BadgeDisplay component
   - Create `src/components/BadgeDisplay.tsx`
   - Props: `badges: Badge[]`
   - Renders a grid of earned badge icons (flame/star icons for 7, 30, 100 milestones)
@@ -258,7 +258,7 @@ An unexpected error occurred, please retry.
 
 ### Phase 5 — Zustand Stores
 
-- [ ] 20. Implement settingsStore
+- [x] 20. Implement settingsStore
   - Create `src/store/settingsStore.ts`
   - State: `language: Locale`, `textSize: TextSize`, `showTransliteration: boolean`, `notificationEnabled: boolean`, `notificationTime: string`
   - Actions: `setLanguage`, `setTextSize`, `toggleTransliteration`, `setNotificationEnabled`, `setNotificationTime`
@@ -267,7 +267,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: each action updates state correctly; persisted state is restored on re-hydration
   - **Requirement**: Requirements 7.2, 8.1, 8.3, 15.6, 15.7
 
-- [ ] 21. Implement favoritesStore
+- [x] 21. Implement favoritesStore
   - Create `src/store/favoritesStore.ts`
   - State: `dhikrIds: Set<number>`
   - Actions: `addFavorite(dhikrId)`, `removeFavorite(dhikrId)`, `isFavorite(dhikrId)`, `hydrate(ids)`
@@ -276,7 +276,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: add/remove/isFavorite state transitions; hydrate populates set
   - **Requirement**: Requirements 10.1, 10.3, 10.4
 
-- [ ] 22. Implement sessionStore
+- [x] 22. Implement sessionStore
   - Create `src/store/sessionStore.ts`
   - State: `categoryId`, `dhikrIds`, `currentIndex`, `count`, `isComplete`
   - Actions: `startSession`, `increment`, `resetCount`, `advance`, `exitSession`
@@ -286,7 +286,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: increment, advance to next dhikr, advance past last dhikr sets isComplete, exitSession resets state
   - **Requirement**: Requirements 4.2, 4.4, 4.5, 4.6
 
-- [ ] 23. Implement streakStore
+- [x] 23. Implement streakStore
   - Create `src/store/streakStore.ts`
   - State: `currentStreak`, `lastCheckin`, `longestStreak`, `checkedInToday`, `badges`, `source`
   - Actions: `checkIn()`, `hydrate(data, badges, source?)`, `subscribeToFirestore(uid)`
@@ -296,7 +296,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: checkIn increments streak, checkIn is idempotent same day, missed day resets streak, milestone badge awarded at 7/30/100
   - **Requirement**: Requirements 14.1, 14.3, 14.4, 14.6, 14.8, 14.9, 14.10
 
-- [ ] 24. Implement authStore
+- [x] 24. Implement authStore
   - Create `src/store/authStore.ts`
   - State: `user: FirebaseUser | null`, `isLoading: boolean`
   - Actions: `signInWithGoogle()`, `signOut()`, `setUser(user)`
@@ -306,7 +306,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: setUser updates state, signOut clears user, error during signIn leaves user as null
   - **Requirement**: Requirements 16.1, 16.2, 16.5, 16.7
 
-- [ ] 25. Implement todoStore
+- [x] 25. Implement todoStore
   - Create `src/store/todoStore.ts`
   - State: `items: TodoItem[]`
   - Actions: `addItem(title, notes?)`, `toggleItem(id)`, `editItem(id, title, notes?)`, `deleteItem(id)`, `hydrate(items)`
@@ -321,7 +321,7 @@ An unexpected error occurred, please retry.
 
 ### Phase 6 — Custom Hooks
 
-- [ ] 26. Implement useCategories and useDhikrByCategory hooks
+- [x] 26. Implement useCategories and useDhikrByCategory hooks
   - Create `src/hooks/useCategories.ts` — calls `getCategories(db, locale)` on mount; returns `{ categories, isLoading, error }`
   - Create `src/hooks/useDhikrByCategory.ts` — takes `categoryId`; calls `getDhikrByCategory(db, categoryId, locale)` on mount; returns `{ dhikrList, isLoading, error }`
   - Both hooks read `locale` from `settingsStore`
@@ -329,13 +329,13 @@ An unexpected error occurred, please retry.
   - Write unit tests: loading state, data returned on success, error state on DB failure
   - **Requirement**: Requirements 2.2, 2.3, 2.4
 
-- [ ] 27. Implement useDhikr hook
+- [x] 27. Implement useDhikr hook
   - Create `src/hooks/useDhikr.ts` — takes `dhikrId`; calls `getDhikrById(db, id, locale)`; returns `{ dhikr, isLoading, error }`
   - Handles translation fallback: if `translationFallback === true`, screen shows "(English)" notice
   - Write unit tests: returns dhikr data, handles missing dhikr (null), handles translation fallback flag
   - **Requirement**: Requirements 3.1–3.5, 7.4
 
-- [ ] 28. Implement useDhikrView hook
+- [x] 28. Implement useDhikrView hook
   - Create `src/hooks/useDhikrView.ts`
   - On mount: read `streakStore.lastCheckin`; compare to today's date (`'YYYY-MM-DD'`)
   - If `lastCheckin !== today`:
@@ -346,7 +346,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: check-in recorded on first view, no-op on same-day second view, guest writes to SQLite only, authenticated writes to both
   - **Requirement**: Requirements 14.1, 20.1, 20.2
 
-- [ ] 29. Implement useSearch hook
+- [x] 29. Implement useSearch hook
   - Create `src/hooks/useSearch.ts`
   - Takes `query: string`; debounces 300ms; calls `searchDhikr(db, query, locale)` when `query.trim().length >= 1`
   - Returns `{ results, isLoading, isEmpty }` — `isEmpty` is true when query is non-empty but results are empty
@@ -354,7 +354,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: debounce behavior, empty query returns no results, non-empty query returns results, no-results state
   - **Requirement**: Requirements 11.1, 11.2, 11.3
 
-- [ ] 30. Implement useStreakNudge hook
+- [x] 30. Implement useStreakNudge hook
   - Create `src/hooks/useStreakNudge.ts`
   - Returns `{ shouldShow: boolean, dismiss: () => void, dismissPermanently: () => void }`
   - `shouldShow = true` iff: user is Guest AND `localStreak >= 3` AND `nudge_dismissed_permanently !== '1'` AND (never dismissed OR >3 days since last dismissal OR streak grew by 7+ since last dismissal)
@@ -364,7 +364,7 @@ An unexpected error occurred, please retry.
   - Write unit tests: all trigger conditions (threshold, authenticated guard, permanent dismissal, 3-day cooldown, streak growth re-trigger)
   - **Requirement**: Requirements 21.1–21.8
 
-- [ ] 31. Implement useRewardClaim hook
+- [x] 31. Implement useRewardClaim hook
   - Create `src/hooks/useRewardClaim.ts`
   - Returns `{ submitClaim, isSubmitting, error, isSubmitted }`
   - `submitClaim(milestone, gopayNumber)`:
@@ -379,7 +379,7 @@ An unexpected error occurred, please retry.
 
 ### Phase 7 — Screens
 
-- [ ] 32. Implement Home screen
+- [x] 32. Implement Home screen
   - Implement `app/(tabs)/index.tsx`
   - Display `StreakWidget` (streak count + checked-in state) prominently at top
   - Display category grid using `CategoryCard` components (from `useCategories` hook)
@@ -390,7 +390,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders streak widget, category grid, favorites shortcut; navigates on press
   - **Requirement**: Requirements 2.2, 10.2, 14.2, 14.5, 21.1
 
-- [ ] 33. Implement Category Detail screen
+- [x] 33. Implement Category Detail screen
   - Implement `app/category/[id].tsx`
   - Display category name (Arabic + translated) as header
   - Display ordered list of `DhikrCard` components (from `useDhikrByCategory` hook)
@@ -400,7 +400,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders category name, dhikr list, start session button; favorite toggle works
   - **Requirement**: Requirements 2.3, 2.4, 4.1
 
-- [ ] 34. Implement Dhikr Detail screen
+- [x] 34. Implement Dhikr Detail screen
   - Implement `app/dhikr/[id].tsx`
   - Display Arabic text (`ArabicText` component at readable size)
   - Display translation; show "(English)" notice if `translationFallback === true`
@@ -413,7 +413,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders all fields, transliteration conditional, translation fallback notice, useDhikrView called on mount
   - **Requirement**: Requirements 3.1–3.5, 6.1, 6.2, 7.4, 14.1
 
-- [ ] 35. Implement Source Detail screen
+- [x] 35. Implement Source Detail screen
   - Implement `app/source/[dhikrId].tsx` (modal presentation)
   - Display full Hadith text or Qur'anic verse context
   - Display scholar name(s) who graded it
@@ -422,7 +422,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders all source fields, handles null grading rationale gracefully
   - **Requirement**: Requirements 6.3
 
-- [ ] 36. Implement Guided Session screen
+- [x] 36. Implement Guided Session screen
   - Implement `app/session/[categoryId].tsx`
   - On mount: load dhikr IDs for category; call `sessionStore.startSession(categoryId, dhikrIds)`
   - Display current dhikr: Arabic text, translation, repetition count
@@ -435,7 +435,7 @@ An unexpected error occurred, please retry.
   - Write component test: counter increments, advance navigates to next dhikr, completion screen shown, exit resets session
   - **Requirement**: Requirements 4.1–4.7, 5.1–5.4
 
-- [ ] 37. Implement Favorites screen
+- [x] 37. Implement Favorites screen
   - Implement `app/(tabs)/favorites.tsx`
   - Load favorite dhikr entries using `favoritesStore.dhikrIds` + `getDhikrById` for each
   - Display list of `DhikrCard` components
@@ -445,7 +445,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders favorites list, empty state, remove favorite updates list
   - **Requirement**: Requirements 10.1–10.5
 
-- [ ] 38. Implement Search screen
+- [x] 38. Implement Search screen
   - Implement `app/(tabs)/search.tsx`
   - Search input at top; calls `useSearch` hook with debounced query
   - Display list of `DhikrCard` results
@@ -454,7 +454,7 @@ An unexpected error occurred, please retry.
   - Write component test: renders search input, results list, no-results state, navigation on press
   - **Requirement**: Requirements 11.1–11.4
 
-- [ ] 39. Implement To-Do List screen
+- [x] 39. Implement To-Do List screen
   - Implement `app/(tabs)/todo.tsx`
   - Display list of `TodoItem` components from `todoStore.items`
   - "Add" button opens inline form or modal: title input (required) + notes input (optional)
@@ -464,17 +464,17 @@ An unexpected error occurred, please retry.
   - Write component test: renders todo list, add form validation (empty title rejected), toggle/delete/edit work
   - **Requirement**: Requirements 17.1–17.10
 
-- [ ] 40. Implement Profile screen
+- [x] 40. Implement Profile screen
   - Implement `app/(tabs)/profile.tsx`
   - Guest state: "Sign in with Google" button navigates to `sign-in`
   - Authenticated state: display Google display name + profile picture
   - Links to `settings` screen
-  - Display earned badges via `BadgeDisplay` component
+  - Display earned badg es via `BadgeDisplay` component
   - "Sign out" button calls `authStore.signOut()`
   - Write component test: guest state shows sign-in button, authenticated state shows user info and sign-out
   - **Requirement**: Requirements 14.7, 16.4, 16.5
 
-- [ ] 41. Implement Settings screen
+- [x] 41. Implement Settings screen
   - Implement `app/settings.tsx`
   - Language selector: shows English and Bahasa Indonesia as available options; calls `settingsStore.setLanguage()`; re-renders all UI strings immediately
   - Text size selector (Small / Medium / Large): calls `settingsStore.setTextSize()`; applies immediately
@@ -484,7 +484,7 @@ An unexpected error occurred, please retry.
   - Write component test: language change to 'id' updates all UI strings to Indonesian, text size change applies to Arabic text, notification toggle disabled when permission denied
   - **Requirement**: Requirements 7.2, 7.3, 8.1, 8.2, 8.3, 15.6, 15.7
 
-- [ ] 42. Implement Sign-In screen
+- [x] 42. Implement Sign-In screen
   - Implement `app/sign-in.tsx`
   - "Sign in with Google" button styled per Google branding guidelines
   - Calls `authStore.signInWithGoogle()`; shows loading state during sign-in

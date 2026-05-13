@@ -55,11 +55,5 @@
     "typescript": "5.9.2",
     "workbox-cli": "7.4.1"
   },
-  "private": true,
-  "jest": {
-    "preset": "jest-expo",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ]
-  }
+  "private": true
 }

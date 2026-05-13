@@ -1,0 +1,18 @@
+﻿node : ΓùÅ Multiple configurations found:
+At line:1 char:1
++ node node_modules/jest/bin/jest.js --showConfig 2>&1 | Out-File -File ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓùÅ Multiple configurations found 
+   ::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+    * C:/Rendy/Projects/dhikr/jest.config.js
+    * `jest` key in C:/Rendy/Projects/dhikr/package.json
+
+  Implicit config resolution does not allow multiple configuration files.
+  Either remove unused config files or select one explicitly with `--config`.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+

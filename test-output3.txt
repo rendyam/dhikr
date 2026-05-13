@@ -1,0 +1,683 @@
+﻿node : FAIL __tests__/components/SourceBadge.test.tsx (5.476 s)
+At line:1 char:1
++ node node_modules/jest/bin/jest.js __tests__/components/SourceBadge.t ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (FAIL __tests__/...t.tsx (5.476 s) 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  SourceBadge
+    ├ù renders "Sahih" label for grade="sahih" (904 ms)
+    ├ù renders "Hasan" label for grade="hasan" (9 ms)
+    ├ù applies successSubtle background for grade="sahih" (6 ms)
+    ├ù applies warningSubtle background for grade="hasan" (8 ms)
+    ├ù applies success text color for grade="sahih" (12 ms)
+    ├ù applies warning text color for grade="hasan" (5 ms)
+    ├ù sets accessibilityRole to "text" on the pill for grade="sahih" (5 ms)
+    ├ù sets accessibilityRole to "text" on the pill for grade="hasan" (5 ms)
+    ├ù sets accessibilityLabel to the localized grade label for grade="sahih" 
+(5 ms)
+    ├ù sets accessibilityLabel to the localized grade label for grade="hasan" 
+(7 ms)
+
+  ΓùÅ SourceBadge ΓÇ║ renders "Sahih" label for grade="sahih"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:84:27)
+
+  ΓùÅ SourceBadge ΓÇ║ renders "Hasan" label for grade="hasan"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:89:27)
+
+  ΓùÅ SourceBadge ΓÇ║ applies successSubtle background for grade="sahih"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:96:59)
+
+  ΓùÅ SourceBadge ΓÇ║ applies warningSubtle background for grade="hasan"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:105:32)
+
+  ΓùÅ SourceBadge ΓÇ║ applies success text color for grade="sahih"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:114:27)
+
+  ΓùÅ SourceBadge ΓÇ║ applies warning text color for grade="hasan"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:120:27)
+
+  ΓùÅ SourceBadge ΓÇ║ sets accessibilityRole to "text" on the pill for 
+grade="sahih"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:128:32)
+
+  ΓùÅ SourceBadge ΓÇ║ sets accessibilityRole to "text" on the pill for 
+grade="hasan"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:133:32)
+
+  ΓùÅ SourceBadge ΓÇ║ sets accessibilityLabel to the localized grade label for 
+grade="sahih"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:138:32)
+
+  ΓùÅ SourceBadge ΓÇ║ sets accessibilityLabel to the localized grade label for 
+grade="hasan"
+
+    TypeError: (0 , _ViewConfigIgnore.DynamicallyInjectedByGestureHandler) is 
+not a function
+
+    [0m [90m 43 |[39m       accessibilityLabel[33m=[39m{label}
+     [90m 44 |[39m     [33m>[39m
+    [31m[1m>[22m[39m[90m 45 |[39m       [33m<[39m[33mText[39m 
+style[33m=[39m{[styles[33m.[39mlabel[33m,[39m grade [33m===[39m 
+[32m'sahih'[39m [33m?[39m styles[33m.[39msahihLabel [33m:[39m 
+styles[33m.[39mhasanLabel]}[33m>[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 46 |[39m         {label}
+     [90m 47 |[39m       [33m<[39m[33m/[39m[33mText[39m[33m>[39m
+     [90m 48 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
+
+      at Object.<anonymous> (node_modules/react-native/Libraries/NativeComponen
+t/BaseViewConfig.ios.js:178:61)
+      at Object.require (node_modules/react-native/Libraries/NativeComponent/Pl
+atformBaseViewConfig.js:13:1)
+      at Object.require 
+(node_modules/react-native/Libraries/NativeComponent/ViewConfig.js:16:1)
+      at Object.require 
+(node_modules/react-native/Libraries/Text/TextNativeComponent.js:16:1)
+      at Object.require (node_modules/react-native/Libraries/Text/Text.js:23:1)
+      at requireActual (node_modules/react-native/jest/mockComponent.js:34:12)
+      at Object.mockComponent 
+(node_modules/react-native/jest/mocks/Text.js:21:14)
+      at requireActual (node_modules/react-native/jest/mock.js:32:44)
+      at Object.require [as Text] (node_modules/react-native/index.js:113:12)
+      at Text (src/components/SourceBadge.tsx:45:8)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/
+react-test-renderer.development.js:13976:20)
+      at renderWithHooks (node_modules/react-test-renderer/cjs/react-test-rende
+rer.development.js:2866:22)
+      at updateFunctionComponent (node_modules/react-test-renderer/cjs/react-te
+st-renderer.development.js:6006:19)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.de
+velopment.js:7474:18)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:1574:13)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10972:22)
+      at workLoopSync (node_modules/react-test-renderer/cjs/react-test-renderer
+.development.js:10816:41)
+      at renderRootSync (node_modules/react-test-renderer/cjs/react-test-render
+er.development.js:10797:11)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-ren
+derer.development.js:10384:39)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cj
+s/react-test-renderer.development.js:2094:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act 
+(node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation 
+(node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct 
+(node_modules/@testing-library/react-native/src/render-act.ts:12:11)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:81:33)
+      at renderInternal 
+(node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at renderBadge (__tests__/components/SourceBadge.test.tsx:71:16)
+      at Object.renderBadge (__tests__/components/SourceBadge.test.tsx:143:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 10 total
+Snapshots:   0 total
+Time:        6.734 s
+Ran all test suites matching /__tests__\\components\\SourceBadge.test.tsx/i.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect 
+async operations that kept running after all tests finished?
